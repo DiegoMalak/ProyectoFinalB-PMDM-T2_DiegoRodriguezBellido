@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/tv_txt_size_titulo_main"
         android:textAlignment="center"
-        android:text="NOMBRE DEL MUSEO"
+        android:text="@string/nombre_del_museo"
         android:textColor="@color/black"
         />
     <LinearLayout
@@ -30,7 +30,8 @@
             android:textSize="@dimen/tv_txt_size_detalles_museo"
             android:text="@string/tv_detalles_distrito_fijo"
             android:textColor="@color/black"
-            android:layout_weight="4"
+            android:textStyle="bold"
+            android:layout_weight="3"
             />
         <TextView
             android:id="@+id/tvDetallesDistritoMuseoVacio"
@@ -54,9 +55,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/tv_txt_size_detalles_museo"
-            android:text="AREA:"
+            android:text="@string/area_detalle"
             android:textColor="@color/black"
-            android:layout_weight="4"
+            android:textStyle="bold"
+            android:layout_weight="3"
             />
         <TextView
             android:id="@+id/tvDetallesAreaMuseoVacio"
@@ -80,9 +82,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/tv_txt_size_detalles_museo"
-            android:text="DIRECCIÓN:"
+            android:text="@string/direccion_detalle"
             android:textColor="@color/black"
-            android:layout_weight="4"
+            android:textStyle="bold"
+            android:layout_weight="3"
             />
         <TextView
             android:id="@+id/tvDetallesDireccionMuseoVacio"
@@ -94,26 +97,35 @@
             android:layout_weight="1"
             />
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llDetallesCuatro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/llDetallesTres"
+        >
+        <TextView
+            android:id="@+id/tvDetallesDescripcionMuseo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tv_txt_size_detalles_museo"
+            android:text="@string/descripcion_detalle"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/llDetallesTres"
+        android:layout_below="@+id/llDetallesCuatro"
         >
         <LinearLayout
-            android:id="@+id/llDetallesCuatro"
+            android:id="@+id/llDetallesCinco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
-            <TextView
-                android:id="@+id/tvDetallesDescripcionMuseo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/tv_txt_size_detalles_museo"
-                android:text="DESCRIPCIÓN:"
-                android:textColor="@color/black"
-                android:layout_weight="3"
-                />
             <TextView
                 android:id="@+id/tvDetallesDescripcionMuseoVacio"
                 android:layout_width="match_parent"

@@ -3,10 +3,12 @@ package com.dam.proyectofinalb_pmdm_t2_diegorodriguezbellido.retrofitData;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 // Le he cambiado el nombre a la clase porque con Graph no me estaba
 // quedando claro que objeto era el que estaba representando y sin embargo
 // con Museo sí que me queda claro.
-public class Museo {
+public class Museo implements Serializable {
 
     @SerializedName("@id")
     @Expose

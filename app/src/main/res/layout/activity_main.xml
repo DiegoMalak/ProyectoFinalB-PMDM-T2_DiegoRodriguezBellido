@@ -31,22 +31,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/tv_txt_size_titulo_filtro"
-        android:text="@string/tv_txt_titulo_filtro"
+        android:text=""
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_below="@+id/btnSeleccionarFiltro"
         android:textAlignment="center"
         />
 
-
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/flContenedor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.dam.proyectofinalb_pmdm_t2_diegorodriguezbellido.Fragments.InicioFragment"
+        android:layout_marginTop="@dimen/margen_general_frag"
         android:layout_below="@+id/tvFiltroSeleccionado"
         />
-
 
     <Button
         android:id="@+id/btnConsultarListado"

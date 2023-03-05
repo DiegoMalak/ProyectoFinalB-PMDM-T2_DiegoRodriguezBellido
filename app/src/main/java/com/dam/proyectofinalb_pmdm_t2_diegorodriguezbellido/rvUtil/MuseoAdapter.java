@@ -12,30 +12,33 @@ import com.dam.proyectofinalb_pmdm_t2_diegorodriguezbellido.R;
 import com.dam.proyectofinalb_pmdm_t2_diegorodriguezbellido.retrofitData.Museo;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MuseoAdapter extends RecyclerView.Adapter<MuseoAdapter.MuseoVH> implements View.OnClickListener {
 
     // Ponemos el ArrayList de Museos que vamos a mostrar en el RecyclerView.
-    private List<Museo> datosMuseos;
+    private ArrayList<Museo> datosMuseos;
 
     // Creamos una variable para guardar el listener.
     private View.OnClickListener listener;
 
     // Creamos un constructor para inicializar el ArrayList.
-    public MuseoAdapter(List<Museo> datosMuseos, View.OnClickListener listener) {
+    public MuseoAdapter(ArrayList<Museo> datosMuseos) {
         this.datosMuseos = datosMuseos;
+    }
+
+    // El setOnClickListener es para poder asignarle un listener a la vista.
+    public void setOnclickListener(View.OnClickListener listener) {
         this.listener = listener;
     }
 
+    // El onCreateViewHolder es para crear la vista.
     @NonNull
     @Override
     public MuseoVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Creamos una vista a partir del layout mostrar_museo_layout.
         // Para ello, necesitamos un LayoutInflater, que es el que se encarga de crear
         // las vistas a partir de los layouts.
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.mostrar_museo_layout, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.mostrar_museo_layout, parent, false);
         // Asignamos el listener a la vista.
         v.setOnClickListener(this);
         // Creamos un objeto MuseoVH y le pasamos la vista.
@@ -44,19 +47,23 @@ public class MuseoAdapter extends RecyclerView.Adapter<MuseoAdapter.MuseoVH> imp
         return vh;
     }
 
+    // El onBindViewHolder es para enlazar los datos con la vista.
     @Override
     public void onBindViewHolder(@NonNull MuseoVH holder, int position) {
         // Obtenemos el elemento de la lista de museos.
-        holder.bindMuseo(datosMuseos.get(position));
+        holder.bindMuseo(datosMuseos.get(position)); // Le pasamos el elemento de la lista.
     }
 
+    // El getItemCount es para devolver el tamaño de la lista.
     @Override
     public int getItemCount() {
         // Devolvemos el tamaño de la lista de museos.
-        System.out.println("Tamaño de la lista: " + datosMuseos);
+        System.out.println("Tamaño de la lista: " + datosMuseos); // Traza para comprobar que se ejecuta.
         return datosMuseos.size();
     }
 
+    // El onClick es para poder asignarle un listener a la vista.
+    // Y poder hacer click en los elementos del RecyclerView.
     @Override
     public void onClick(View v) {
         // Si el listener no es nulo, ejecutamos el método onClick().
@@ -67,7 +74,6 @@ public class MuseoAdapter extends RecyclerView.Adapter<MuseoAdapter.MuseoVH> imp
 
     // Creamos una clase interna para crear el ViewHolder.
     public static class MuseoVH extends RecyclerView.ViewHolder {
-
         // Declaramos los elementos que vamos a mostrar en el RecyclerView.
         private TextView tvNomMusFilt;
 

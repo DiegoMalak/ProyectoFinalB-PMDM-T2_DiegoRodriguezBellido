@@ -15,4 +15,12 @@
     <string name="txtNombreMuseoFiltrado">Nombre Museo Filtrado</string>
     <string name="call_onFailure_msg_error">Error al cargar los datos de la consulta</string>
     <string name="tv_detalles_distrito_fijo">DISTRITO:</string>
+    <string name="error_consultar_todos_datos">No es succesful, algo está mal...</string>
+    <string name="fallo_onFailure_call">La call ha fallado, algo ha pasado...</string>
+    <string name="error_consultar_datos_api">Error al consultar los datos de la API.</string>
+    <string name="llamada_api_falla">LA LLAMADA DE LA API HA FALLADO</string>
+    <string name="nombre_del_museo">NOMBRE DEL MUSEO</string>
+    <string name="area_detalle">AREA:</string>
+    <string name="direccion_detalle">DIRECCIÓN:</string>
+    <string name="descripcion_detalle">DESCRIPCIÓN:</string>
 </resources>

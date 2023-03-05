@@ -4,19 +4,20 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static Retrofit retrofit = null;
+    // Esta clase es la que nos permite crear el objeto retrofit que nos permitira
+    // realizar las peticiones a la API.
+    private static Retrofit retrofit= null; // Creamos el objeto retrofit como nulo.
 
-    // Esto es un singleton que hace que devuelva el mismo cliente de Retrofit durante
-    // toda la ejecución de la aplicación.
+    // Este metodo nos permite crear el objeto retrofit.
     public static Retrofit getClient(String baseUrl) {
-        // Si no existe el cliente de Retrofit, lo creamos.
-        if (retrofit == null) {
-            // Creamos el cliente de Retrofit.
-            retrofit = new Retrofit.Builder() // El Builder es el constructor de Retrofit.
-                                    .baseUrl(baseUrl) // Indicamos la URL base de la API que se usará para las llamadas.
-                                    .addConverterFactory(GsonConverterFactory.create()) // Indicamos el conversor de JSON a Java.
-                                    .build(); // Creamos el cliente de Retrofit.
+        // Si el objeto retrofit es nulo, lo creamos.
+        if (retrofit==null) {
+            retrofit = new Retrofit.Builder() // Creamos el objeto retrofit.
+                    .baseUrl(baseUrl) // Le pasamos la url base.
+                    .addConverterFactory(GsonConverterFactory.create()) // Le pasamos el convertidor de Gson.
+                    .build(); // Creamos el objeto retrofit.
         }
+        // Devolvemos el objeto retrofit.
         return retrofit;
     }
 }

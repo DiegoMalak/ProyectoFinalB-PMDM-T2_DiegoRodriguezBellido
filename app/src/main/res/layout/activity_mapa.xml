@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MapaActivity"
     android:padding="@dimen/margin_general"
     >
 
     <TextView
-        android:id="@+id/tvNombreMuseoFiltrado"
+        android:id="@+id/tvMapaTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txtNombreMuseoFiltrado"
-        android:textSize="@dimen/text_size_tv_filtro_museo"
-        android:textAlignment="center"
+        android:textSize="@dimen/tv_txt_size_titulo_main"
+        android:gravity="center"
+        android:text="MAPA"
         android:textColor="@color/black"
         />
 
