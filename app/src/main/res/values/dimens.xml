@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_general">16dp</dimen>
+    <dimen name="tv_txt_size_titulo_main">24sp</dimen>
+    <dimen name="tv_txt_size_titulo_filtro">22sp</dimen>
+    <dimen name="size_filtro_titulo">20sp</dimen>
+    <dimen name="margen_general_frag">5dp</dimen>
+    <dimen name="tv_marg_bottom_filtro_dialog">15dp</dimen>
+    <dimen name="text_size_tv_filtro_museo">14sp</dimen>
+    <dimen name="tv_txt_size_detalles_museo">14sp</dimen>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+    <!--Pongo el orderInCategory porque cnsidero que listado se debe ver
+     antes que el mapa, además pone que debe mostrarse por defecto.-->
+    <item
+        android:id="@+id/menuListado"
+        android:title="@string/mn_listado"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menuMapa"
+        android:title="@string/mn_mapa"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        />
+
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="@dimen/margin_general"
+    >
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv_txt_size_titulo_main"
+        android:text="@string/tv_txt_titulo_main"
+        android:textColor="@color/txt_darkgrey_color_title"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btnSeleccionarFiltro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_seleccionar_filtro"
+        android:layout_below="@+id/tvTitulo"
+        />
+
+    <TextView
+        android:id="@+id/tvFiltroSeleccionado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv_txt_size_titulo_filtro"
+        android:text="@string/tv_txt_titulo_filtro"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnSeleccionarFiltro"
+        android:textAlignment="center"
+        />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/flContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.dam.proyectofinalb_pmdm_t2_diegorodriguezbellido.Fragments.InicioFragment"
+        android:layout_below="@+id/tvFiltroSeleccionado"
+        />
+
+
+    <Button
+        android:id="@+id/btnConsultarListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_consultar_listado"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

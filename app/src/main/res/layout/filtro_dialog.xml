@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_general"
+    >
+
+    <TextView
+        android:id="@+id/tvFiltro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_filtrro_titulo"
+        android:textSize="@dimen/size_filtro_titulo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/tv_marg_bottom_filtro_dialog"
+        />
+
+    <LinearLayout
+        android:id="@+id/llFiltro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvFiltro"
+        >
+
+        <Spinner
+            android:id="@+id/spFiltroLocalidad"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:entries="@array/localidades"
+            android:spinnerMode="dropdown"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
